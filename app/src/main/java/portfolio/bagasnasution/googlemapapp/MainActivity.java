@@ -16,7 +16,8 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private String[] titles = new String[]{
-            "Basic Map"
+            "Basic Map",
+            "Get Current Location Address"
     };
 
     @Override
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (i) {
             case 0:
                 intent = new Intent(this, MapsActivity.class);
+                break;
+            case 1:
+                intent = new Intent(this, LocationActivity.class);
                 break;
         }
 
